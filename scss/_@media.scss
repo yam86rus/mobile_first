@@ -1,0 +1,55 @@
+
+// === 640px ===
+
+@media (min-width: 640px){
+    .logo__link{
+        margin-left: 14px;
+    }
+    .header__inner{
+        min-height: 100px;
+    }
+    .container{
+        padding: 0 30px;
+    }
+}
+
+// === / 640px ===
+
+// === 768px ===
+
+@media (min-width: 768px){
+    .logo__link{
+        margin-left: 0px;
+    }
+    .header__inner{
+        min-height: 100px;
+    }
+    .container{
+        padding: 0 40px;
+    }
+}
+
+// === / 768px ===
+
+// === 1024 px ===
+
+@media (min-width: 1024px){
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+}
+
+// === 1440 px ===
+
+@media (min-width: 1440px){
+    .container{
+        max-width: 1320px;
+    }
+    .menu__btn{
+        margin-right: 90px;
+    }
+}
+
+// === / 1440 px ===
