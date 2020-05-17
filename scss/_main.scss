@@ -10,6 +10,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .body {
     min-width: 320px;
     overflow-x: hidden;
@@ -74,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 .top-slider{
     background: rgba(33, 33, 33, 0.5);
     &__item{
+        min-height: 193px;
         color: #fff;
         text-align: center;
     }
@@ -84,6 +91,44 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 28px;
         font-weight: 400;
         padding: 36px 0 28px;
+        max-width: 243px;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 8px;
+            width: 61px;
+            background-color: $text-color;
+            margin: 0 auto;
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        .slick-active{
+            button{
+                background-color: transparent;
+                border: 1px solid #476E4D;
+            }
+        }
+        button{
+            font-size: 0;
+            border: none;
+            background-color: $accent;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }  
 
     }
 }
