@@ -27,11 +27,11 @@ ul,li {
 
 button{
     padding: 0;
+    cursor: pointer;
 }
 
 p{
     margin: 0;
-    text-transform: uppercase;
 }
 
 .container {
@@ -79,7 +79,7 @@ p{
 
 // === top-slider ===
 .head {
-    background-image: url('/images/bg-slider.jpg');
+    background-image: url('/images/bg-slider.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -149,3 +149,32 @@ p{
 }
 // === / top-slider
 
+// === Call ====
+.call{
+    background-color: $accent;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+    &__title{
+        @extend %roboto-500;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__text{
+        @extend %dosis-300;
+        margin-bottom: 40px;
+    }
+    &__btn{
+        @extend %roboto-500;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+        background: $bg-color;
+        border-radius: 3px;
+        border: none;
+        color: $accent;
+        padding: 16px 15px;
+    }
+}

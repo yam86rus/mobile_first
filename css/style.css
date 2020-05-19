@@ -379,6 +379,16 @@ template {
   src: url("../fonts/Roboto-Regular.woff2") format("woolf2"), url("../fonts/Roboto-Regular.woff") format("woff");
 }
 
+.call__text {
+  font-family: 'Dosis-Light';
+  font-weight: 300;
+}
+
+.call__title, .call__btn {
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -408,11 +418,11 @@ ul, li {
 
 button {
   padding: 0;
+  cursor: pointer;
 }
 
 p {
   margin: 0;
-  text-transform: uppercase;
 }
 
 .container {
@@ -456,7 +466,7 @@ p {
 }
 
 .head {
-  background-image: url("/images/bg-slider.jpg");
+  background-image: url("/images/bg-slider.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -528,6 +538,35 @@ p {
   height: 10px;
   border-radius: 50%;
   margin: 0 10px;
+}
+
+.call {
+  background-color: #2B4074;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.call__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.call__text {
+  margin-bottom: 40px;
+}
+
+.call__btn {
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: #F9F6E5;
+  border-radius: 3px;
+  border: none;
+  color: #2B4074;
+  padding: 16px 15px;
 }
 
 @media (min-width: 640px) {
@@ -613,6 +652,20 @@ p {
     max-width: 586px;
     margin: 0 auto;
   }
+  .call {
+    text-align: left;
+  }
+  .call__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .call__box {
+    max-width: 427px;
+  }
+  .call__text {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -633,6 +686,9 @@ p {
   }
   .top-slider .slick-dots {
     bottom: 80px;
+  }
+  .call__box {
+    max-width: 695px;
   }
 }
 
@@ -657,6 +713,22 @@ p {
     font-size: 24px;
     line-height: 26px;
     max-width: 886px;
+  }
+  .top-slider .slick-arrow {
+    width: 70px;
+    height: 70px;
+  }
+  .top-slider .slick-prev {
+    top: calc(50% - 70px);
+  }
+  .top-slider .slick-next {
+    bottom: calc(50% - 70px);
+  }
+  .call__inner {
+    padding: 0 80px;
+  }
+  .call__box {
+    max-width: 796px;
   }
 }
 /*# sourceMappingURL=style.css.map */
