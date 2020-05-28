@@ -379,7 +379,7 @@ template {
   src: url("../fonts/Roboto-Regular.woff2") format("woolf2"), url("../fonts/Roboto-Regular.woff") format("woff");
 }
 
-.call__text {
+.call__text, .service__item-text {
   font-family: 'Dosis-Light';
   font-weight: 300;
 }
@@ -389,7 +389,13 @@ template {
   font-weight: 400;
 }
 
-.call__title, .call__btn {
+.service__item-title, .service__item-link {
+  font-family: 'RobotoCondensed-Bold';
+  font-weight: 700;
+  font-style: normal;
+}
+
+.call__title, .call__btn, .service__description {
   font-family: 'Roboto-Medium';
   font-weight: 500;
 }
@@ -582,9 +588,11 @@ a {
 
 .service {
   text-align: center;
+  padding: 25px 0 40px;
 }
 
 .service__title {
+  color: #2B4074;
   font-size: 24px;
   line-height: 28px;
   position: relative;
@@ -607,6 +615,7 @@ a {
 }
 
 .service__description {
+  text-transform: uppercase;
   line-height: 24px;
   font-size: 20px;
   color: #4A4A4A;
@@ -615,20 +624,100 @@ a {
 
 .service__text {
   color: #797979;
-  line-height: 24px;
-  font-size: 18px;
+  line-height: 15px;
+  font-size: 17px;
   margin-bottom: 40px;
 }
 
-.service__item {
+.service__items {
   min-height: 310px;
   border: 1px solid #F9F6E5;
+  border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.service__items:last-child {
+  border-bottom: 1px solid #F9F6E5;
+}
+
+.service__items :hover .service__item-text,
+.service__items :hover .service__item-link {
+  display: block;
+}
+
+.service .service__item:hover .service__item-iner {
+  border: 4px solid #2B4074;
+}
+
+.service__item-img {
+  margin-bottom: 30px;
+}
+
+.service__item-title {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+
+.service__item-text {
+  display: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #9B9B9B;
+  padding: 0 28px;
+  margin-bottom: 16px;
+}
+
+.service__item-link {
+  display: none;
+  text-transform: uppercase;
+  color: #2B4074;
+  margin: 16px 0 0 0;
+  margin-bottom: 28px;
+}
+
 @media (min-width: 640px) {
+  .service__title {
+    font-size: 48px;
+    margin: 0 0 30px;
+  }
+  .service__title:after {
+    display: none;
+  }
+  .service__description {
+    font-size: 24px;
+    margin-bottom: 69px;
+    position: relative;
+  }
+  .service__description::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 8px;
+    background-color: #2B4074;
+  }
+  .service__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .service__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .service__item {
+    width: 50%;
+    min-height: 294px;
+  }
   .logo__link {
     margin-left: 14px;
   }
@@ -682,6 +771,40 @@ a {
 }
 
 @media (min-width: 768px) {
+  .service__title {
+    font-size: 48px;
+    margin: 0 0 30px;
+  }
+  .service__title:after {
+    display: none;
+  }
+  .service__description {
+    font-size: 24px;
+    margin-bottom: 69px;
+    position: relative;
+  }
+  .service__description::after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: 0 0 0 66px;
+    bottom: -30px;
+    width: 50px;
+    height: 8px;
+    background-color: #2B4074;
+  }
+  .service__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .service__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .service__item {
+    width: 50%;
+    min-height: 294px;
+  }
   .logo__link {
     margin-left: 0px;
   }
@@ -728,6 +851,10 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .service__item {
+    width: 25%;
+    min-height: 294px;
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -752,6 +879,23 @@ a {
 }
 
 @media (min-width: 1440px) {
+  .service__inner {
+    display: flex;
+  }
+  .service__head {
+    text-align: left;
+    max-width: 450px;
+  }
+  .service__description {
+    text-align: left;
+  }
+  .service__title {
+    text-align: left;
+    padding-top: 50px;
+  }
+  .service__items {
+    padding-top: 50px;
+  }
   .container {
     max-width: 1320px;
   }

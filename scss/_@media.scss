@@ -2,6 +2,57 @@
 // === 640px ===
 
 @media (min-width: 640px){
+
+    .service__title{
+        font-size: 48px;
+        margin: 0 0 30px;
+        &:after{
+            display: none;
+        }
+    }
+    
+    .service{
+        &__description{
+            font-size: 24px;
+            margin-bottom: 69px;
+            position: relative;
+                &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                bottom: -30px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 50px;
+                height: 8px;
+                background-color: $accent;
+                }
+        }
+        &__text{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__items{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 50%;
+            min-height: 294px;
+            &::hover{
+                
+
+            }
+        }
+
+    }
+
+    // ------------
+
+    
+
+
     .logo__link{
         margin-left: 14px;
     }
@@ -48,12 +99,11 @@
     .slick-prev{
         background-color:$accent;
         top: calc(50% - 56px);
-
     }
     .slick-next{
         background-color: $bg-color;
         bottom: calc(50% - 56px);
-    }
+        }   
     }
 }
 
@@ -62,6 +112,53 @@
 // === 768px ===
 
 @media (min-width: 768px){
+
+    .service__title{
+        font-size: 48px;
+        margin: 0 0 30px;
+        &:after{
+            display: none;
+        }
+    }
+    
+    .service{
+        &__description{
+            font-size: 24px;
+            margin-bottom: 69px;
+            position: relative;
+                &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                margin: 0 0 0 66px;
+                bottom: -30px;
+                width: 50px;
+                height: 8px;
+                background-color: $accent;
+                }
+        }
+        &__text{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__items{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 50%;
+            min-height: 294px;
+            &::hover{
+                
+
+            }
+        }
+
+    }
+
+    // ------------
+
+
     .logo__link{
         margin-left: 0px;
     }
@@ -115,6 +212,12 @@
 // === 1024 px ===
 
 @media (min-width: 1024px){
+    
+    .service__item{
+        width: 25%;
+            min-height: 294px;
+    }
+
     .container{
         max-width: 1200px;
         margin: 0 auto;
@@ -145,6 +248,27 @@
 // === 1440 px ===
 
 @media (min-width: 1440px){
+
+.service__inner{
+    display: flex;  
+}
+.service{
+    &__head{
+        text-align: left;
+        max-width: 450px;
+    }
+    &__description{
+        text-align: left;
+    }
+    &__title{
+        text-align: left;
+        padding-top: 50px;
+    }
+    &__items{
+        padding-top: 50px;
+    }
+}
+
     .container{
         max-width: 1320px;
     }
