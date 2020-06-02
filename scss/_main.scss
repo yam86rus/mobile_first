@@ -213,6 +213,12 @@ a{
             background-color: $accent;
         }
     }
+    &__title--white{
+        color: #fff;
+        &::after{
+            background-color: #fff;
+        }
+    }
 
     &__description{
         text-transform: uppercase;
@@ -286,5 +292,35 @@ a{
         color: $accent;
         margin: 16px 0 0 0;
         margin-bottom: 28px;
+    }
+}
+
+// === Project ===
+.project{
+    padding: 20px 0 40px;
+    background: linear-gradient(rgba(43, 64, 116, 1),rgba(43, 64, 116, 0));
+    min-height: 350px;
+    &__item{
+        display: block;
+        width: 100%;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__image{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    &__text{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: $accent;
     }
 }
