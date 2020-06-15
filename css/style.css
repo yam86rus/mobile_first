@@ -483,7 +483,7 @@ a {
 }
 
 .head {
-  background-image: url("/images/bg-slider.webp");
+  background-image: url("../images/bg-slider.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
